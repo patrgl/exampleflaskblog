@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/create.css') }}">
+    <title>Create Blog</title>
+</head>
+{% include 'navbar.html' %}
+<body>
+
+    <div class="form-holder">
+
+        <form method="POST">
+            <div class="form-item">
+                {{ form.title.label }} <br>{{ form.title }} 
+            </div>
+            <div class="form-item">
+                {{ form.category.label }} <br>{{ form.category }}
+            </div>
+            <div class="form-item">
+                {{ form.body.label }} <br>{{ form.body }}
+            </div> 
+            <div class="form-item">
+                <button type="submit">Post</button>
+            </div>
+        </form>
+
+    </div>
+
+</body>
+</html>

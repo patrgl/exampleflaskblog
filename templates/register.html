@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/register.css') }}">
+</head>
+{% include 'navbar.html' %}
+<body>
+    <div class="all-holder">
+
+        <div class="login-holder">
+            <form method="POST">
+                <h2>Register</h2>
+                {{ form.username.label }} {{ form.username }} <br>
+                {{ form.password.label }} {{ form.password }} <br>
+                <button type="submit">Register</button>
+                {{message}}
+            </form>
+        </div>
+
+    </div>
+</body>
+</html>

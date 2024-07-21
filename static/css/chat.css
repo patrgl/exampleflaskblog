@@ -1,0 +1,89 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100vw;
+    margin-left: -10px;
+    padding-left: 15px;
+    background-color: #ffffff;
+}
+
+.navbar a {
+    display: flex;
+    color: #000000;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+    float: left;
+}
+
+.navbar a:hover{
+  background-color: rgba(78, 78, 78, 0.214);
+}
+
+body {
+    font-family: 'Railway', sans-serif;
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.chats-holder {
+    width: 65%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    margin-top: 80px;
+}
+
+#messages-holder {
+    height: 70vh;
+    overflow-y: auto;
+    border: 1px solid rgba(211, 211, 211, 0.508);
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.chats-holder input[type=text] {
+    border-style: solid;
+    width: 88%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-color: rgba(211, 211, 211, 0.508);
+    border-radius: 10px;
+}
+
+.chats-holder button {
+    border-style: solid;
+    padding: 10px;
+    border-radius: 10px;
+    border-color: rgba(211, 211, 211, 0.508);
+}
+
+.comments {
+    margin-left: 30px;
+}
+
+
+
+@media (max-width: 800px) {
+    .chats-holder {
+        width: 95%;
+    }
+
+    .chats-holder button {
+        width: 95%;
+    }
+
+    .chats-holder input[type=text] {
+        width: 90%;
+    }
+
+    #messages-holder {
+        height: 60vh;
+    }
+
+}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/categorias.css') }}">
+    <title>Categorias</title>
+</head>
+{% include 'navbar.html' %}
+<body>
+    <div class="categories-holder">
+        <h1>Categorias</h1>
+        {% for category in categories %}
+            <li>{{ category.name }}</li>
+        {% endfor %}
+    
+        <form id="add-category" method="POST" action="/api/add_category">
+            <input type="text" name="category_name" placeholder="Escriba nueva categoria...."> <button type= "submit">Agregar</button>   
+        </form>
+    </div>
+
+</body>
+</html>

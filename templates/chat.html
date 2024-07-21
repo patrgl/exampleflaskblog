@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.5/socket.io.js"></script>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/chat.css') }}">
+  <script src="{{ url_for('static', filename='js/chat.js') }}"></script>
+</head>
+{% include 'navbar.html' %}
+<body>
+<div class="chats-holder">
+  <div id="messages-holder">
+    <div id="messages"></div>
+  </div>
+
+  <input type="hidden" id="username" value="{{ username }}">
+  <input type="text" id="message" placeholder="Write your message...">
+  <button id="sendBtn" type="submit">Send</button>
+</div>
+
+</body>
+</html>

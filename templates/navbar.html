@@ -1,0 +1,13 @@
+<div class="navbar">
+    <a href="{{url_for('index')}}">Posts</a>
+    <a href="{{url_for('create')}}">Create</a> 
+    <a href="{{url_for('chat')}}">Chat</a>
+    <a href="{{url_for('categories')}}">Categories</a>
+    {% if logged_in == True %}
+        <a href="{{url_for('logout')}}">Logout</a>
+    {% else %}
+    <a href="{{url_for('login')}}">Login</a>
+
+    <a href="{{url_for('register')}}">Register</a>
+    {% endif %}
+</div>

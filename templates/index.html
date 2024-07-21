@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posts</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+</head>
+{% include 'navbar.html' %}
+<body>
+    <div class="posts-holder">
+
+        <div class="posts-indicator">
+            <h1>Posts</h1>
+        </div>
+
+        {% for post in all_posts %}
+        <a href="{{url_for('view_post', id=post.id)}}">
+            <div class="post">
+
+                <h3>{{post.title}}</h3>
+                Category: {{post.category}} <br>
+                Date: {{post.publish_date}} <br>
+                Author: {{post.author}} <br>
+
+            </div>
+        </a>
+        {% endfor %}
+
+    </div>
+
+</body>
+</html>
