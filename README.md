@@ -1,4 +1,10 @@
-An example blog site made with Python & Flask.
+<h1>An example blog site made with Python</h1>
 
-Authentication with Bcrypt.
-Has support for a live chat with SocketIO and Jquery. If you'd like the chat to work with other devices on your local network, set the host within flask to your current IP address, and the ip adress within chat.js to that same address.
+<h2>Features:</h2>
+<li>Live Chat using SocketIO</li>
+<li>Password Hashing using Bcrypt</li>
+<li>Comments</li>
+<li>Desktop & Mobile UI</li>
+
+<h2>Purpose</h2>
+This is meant to be used as an example, or a starting off point for a project.
